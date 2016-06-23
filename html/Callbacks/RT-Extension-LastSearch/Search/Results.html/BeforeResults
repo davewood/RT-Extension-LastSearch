@@ -1,0 +1,13 @@
+<%init>
+
+my @query_params = ();
+while ( my ($key, $value) = each %$ARGSRef ) {
+    push(@query_params, "$key=$value");
+}
+$session{'RT-Extension-LastSearch'} = '/Search/Results.html?' . join('&', @query_params);
+
+</%init>
+
+<%args>
+$ARGSRef => {}
+</%args>

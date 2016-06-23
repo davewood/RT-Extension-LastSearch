@@ -1,0 +1,13 @@
+<%init>
+
+# get the search main menu
+my $c = Menu()->child('search');
+
+# add a child menu
+$c->child(
+    'menu_rt_extension_lastsearch',
+    title => loc('Show Results'),
+    path  => $session{'RT-Extension-LastSearch'},
+);
+
+</%init>
